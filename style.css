@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /*10px / 16px = 62.5%  
+    1rem = 10px*/
+
+    font-size: 62.5%;
+}
+
+body{
+
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+/**************************/
+/*Componentes reutilizables*/
+/**************************/
+
+.contenedor {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v {
+    align-items: center;
+}
+
+/**************************/
+/*NAVEGADOR*/
+/**************************/
+.header{
+    /* max-width:1300px ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030708;
+    height: auto;
+    padding: 0 4.8rem;
+}
+.logo{
+    height: 7.4rem;
+}
+
+.main-nav-list{
+list-style: none;
+display: flex;
+gap: 3.2rem;
+}
+
+.link-nav:link,
+.link-nav:visited {
+text-decoration: none;
+color:#F3F5F8;
+font-weight: 500;
+font-size: 1.8rem;
+transition: all 0.3s;
+} 
+
+.link-nav:hover,
+.link-nav:active {
+    color: #9d0002 ;
+}
+
+/*INICIO*/
+.sec-incio{
+background-image: linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)), 
+    url(Imagenes/Seccion-Inicio/Mitsu-Motor-1.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: left;
+background-color: #2b2d42; /* Fallback Color*/
+padding: 4.8rem 0 9.6rem 0;
+}
+
+.montero{
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+    
+}
+.box-inicio{
+    text-align: center;
+}
+.ttl-1 {
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+    color: #F3F5F8;
+}
+
+.dtion-inicio{
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+    color: #F3F5F8 ;
+}
+
+.btn:link, .btn:active {
+    /*background-color: #A52A2A;*/
+    background-color: #9d0002;
+    color: #C9C6C6;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    text-decoration: none;
+    
+}
+
+.btn:hover{
+    background-color: #c06a6a ;
+}
+
+.btn:visited {
+    color: #C9C6C6;
+}
+
+/*NOSOTROS */
+.sec-nosotros{
+    background-color: #c8c8c8;
+    padding-top: 3.6rem;
+    position: relative;
+}
+
+/* Conseguir una mejor Imagen
+.img-historia{   
+position: absolute;
+top: 0;
+right: 0;
+} */
+
+.nos-his-ttl{   
+    color: #9d0002;
+    font-size: 4.0rem;
+    text-align: center;
+    padding: 1.6rem 3.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+
+}
+
+.nos-his-txt{
+    color: #2b2d42 ;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3.2rem ;
+
+}
+
+.nos-servicios{
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+
+
+}
+.serv-icon{
+    display: block;
+    margin: auto;
+    margin-bottom: 1.2rem;
+}
+.serv-ttl{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: #9d0002;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.serv-prf{
+    text-align: justify;
+    font-size: 1.4rem ;
+    line-height: 1.2;
+    color:#2b2d42
+}
+
+/*Portafolio */
+
+.portafolio {
+    background-image: linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)), 
+    url(Imagenes/Seccion-Inicio/Motor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.sec-portafolio { 
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: #c8c8c8;
+    font-size: 3rem;
+    font-weight: 500;   
+    padding: 3rem 0;
+}
+
+/*CONTACTO*/ 
+
+.conta-address
+.icon-contac{
+    margin-bottom: 1.2rem;
+}
+
+.txt-contac{
+    text-align: justify;
+    font-size: 1.4rem ;
+    line-height: 1.2;
+    color:#2b2d42;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+}
+
+.foo-info {
+    list-style: none;
+    color: #2b2d42;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 870px) {
+
+    .header{
+    flex-direction: column;
+        }
+    .main-nav-list{
+    margin-top: 1.2rem;
+    padding: 0;
+    }
+
+
+    .montero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } 
+
+    .nos-servicios{
+        padding-bottom: 1.2rem ;
+    }
+
+    .serv-prf{
+        text-align: justify;
+        line-height: 1.5;
+    }
+    }
+
+    @media screen and (max-width: 710px) {
+        .porta-prf{
+            padding: 1.2rem;
+        }    
+    
+    }
+
+    @media screen and (max-width: 570px) {
+        .main-nav-list{
+            display: flex;
+            flex-direction: column;
+            row-gap: 0;
+            align-items: center;
+        }
+
+    .nos-servicios{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 0;
+        padding-bottom: 0.2rem ;
+        row-gap: 2.6rem;
+        
+    }   
+    .row {
+display: flex;
+flex-direction: column;
+align-items: center;
+    }
+    
+    }
