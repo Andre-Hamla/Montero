@@ -12,12 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../Estilos/estilos.css" />
     <title>Montero y Algo Mas</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body>
     <header class="header">
@@ -27,7 +27,7 @@
     <li><a href="#" class="link-nav">Inicio</a></li>
     <li><a href="#" class="link-nav">Nosotros</a></li>
     <li><a href="#" class="link-nav">Portafolio</a></li>
-    <li><a href="#" class="link-nav">Productos</a></li>
+    <li><a href="shop.html" class="link-nav"><i class="bi bi-bag"></i> Tienda</a></li>
     <li><a href="#" class="link-nav">Blog</a></li>
     <li><a href="#" class="link-nav">Contacto</a></li>
 </ul>
@@ -87,15 +87,75 @@
     </section>
 
     <section class="portafolio">
-        <div class="sec-portafolio">
+        <div class="contenedor">
         <p class="porta-prf">Contamos con una variedad de marcas reconocidas mundialmente</p>
-            <div class="imgs-box contenedor">
-                <img class="img-fluid rounded" src="/Imagenes/Portafolio/Eristic.png" alt=""> 
-                <img class="img-fluid" src="/Imagenes/Portafolio/555.webp" alt="">
-                <img class="img-fluid rounded" src="/Imagenes/Portafolio/FIC PNG.png" alt="">
+        <div class="sec-portafolio"> 
+            <div class="porta-txt">
+                <p class="porta-prrf">Para nosotros es prioridad brindarte las mejores marcas del mercado. Es por eso que contamos con 
+                    las mejores marcas del mercado, para darte la calidad que tu carro necesita. </p>
             </div>  
-        </div>
-    </section>
+        <div class="img-slider">
+                <div class="slider"> 
+                    <img class="foto img-fluid rounded" src="/Imagenes/Portafolio/555-logo.jpg" alt="Logo de la empresa 555 Suspensiones">
+                    <div class="info-port">
+                        <!-- <h3>555</h3> -->
+                        <p>555 es una marca japonesa reconocida en todo el mundo con presencia en más de 120 países, fabricando partes de suspensión y dirección para vehículos automotor, </p> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>       
+        </section>  
+        <section class="blog">
+            <div class="articulos contenedor">
+                <article class="posts">
+                    <div class="post-header">
+                        <div>
+                            <img class="img-post" src="/Imagenes\Blog\Mitsubishi Xforce.jpg" alt="Imagen del nuevo automovil Mitsubishi Xforce">
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <span>10 Agosto de 2023 | Lanzamientos</span>
+                        <h2 class="art-ttl">Conoce la nueva Mitsubishi Xforce</h2>
+                        <p class="art-txt">CSi bien ya se habían entregado los primeros informes 
+                            oficiales a finales de julio sobre el nuevo SUV compacto de la marca, 
+                            hoy se llevó a cabo su revelación completa en Indonesia. Conozca al Mitsubishi Xforce.</p>
+                            <a href="https://www.elcarrocolombiano.com/autos-del-mundo/mitsubishi-xforce-es-el-nuevo-suv-compacto-que-pronto-vendra-a-america-latina/" class="art-link">Leer más &#10132</a>
+                    </div>
+                </article>
+                <article class="posts">
+                    <div class="post-header">
+                        <div>
+                            <img class="img-post" src="/Imagenes/Blog/Correa Distri.jpg" alt="La imagen muestra una polea junto a una correa de tiempo para automovil">
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <span>07 Agosto de 2023 | Mantenimiento</span>
+                        <h2 class="art-ttl">Cuando Cambiar la Correa de Distribucion</h2>
+                        <p class="art-txt">Comprar un auto es una de las decisiones más importantes de tu vida, por ello, es fundamental no solo determinar la camioneta o auto que mejor se adapte
+                            a tus necesidades sino también conocer el funcionamiento de sus diversos componentes. </p>
+                            <a href="#" class="art-link">Leer más &#10132</a>
+                    </div>
+                </article>
+                <article class="posts">
+                    <div class="post-header">
+                        <div>
+                            <img class="img-post" src="/Imagenes/Blog/VIN.jpg" alt="La imagen muestra una placa con el numero VIN de un automovil">
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <span>02 Agosto de 2023 | Informacion</span>
+                        <h2 class="art-ttl">Que es el número VIN y para que sirve</h2>
+                        <p class="art-txt">Todos los vehículos poseen un código que, al igual que la huella dactilar de las personas,
+                            sirve para identificarlos y obtener información de su procedencia o estado legal. 
+                            A continuación, te contamos todo lo que necesitas saber sobre el VIN de un vehículo, información que te será de gran utilidad,
+                            especialmente si quieres comprar un vehículo usado.</p>
+                            <a href="https://www.mapfre.com.co/seguros-carros/preguntas-frecuentes/que-es-numero-vin-carro/#:~:text=El%20n%C3%BAmero%20VIN%20de%20un,de%20veh%C3%ADculos%20durante%20su%20fabricaci%C3%B3n." class="art-link">Leer más &#10132</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     <section class="contacto container">
         <div class="row box-contact">
     <div class="sec-contacto col-6">
@@ -144,12 +204,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
-<footer>
+<footer class="footer">
     <div class="foo-info">
-    <ul>
-        <li>Carrera 44 # 66,080002, Barranquilla, Atlantico.</li>  
-        <li> &copy; 2023 Montero Y Algo Mas.  All rights reserved.</li>
-    </ul>
+        <p>Carrera 44 # 66,080002, Barranquilla, Atlantico.</p> 
+        <p>&copy; 2023 Montero Y Algo Mas.  All rights reserved.</p> 
     </div>
     <div class="foo-icons">
     <div id="redes">
@@ -194,7 +252,7 @@ integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgr
             <path d="M12 14l0 3"></path>
             <path d="M16 14l0 3"></path>
         </svg>
-        <p>Crear links para pagos</p>
+
     </div>
 </div>
 </footer>   
