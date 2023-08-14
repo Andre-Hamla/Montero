@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030708;
+    height: auto;
+    padding: 0 4.8rem;
+
+    .logo{
+        height: 7.4rem;
+    }
+    .main-nav-list{
+        list-style: none;
+        display: flex;
+        gap: 3.2rem;
+        
+        .link-nav:link,
+        .link-nav:visited {
+        text-decoration: none;
+        color:$Light-Bluewhite;
+        font-weight: 500;
+        font-size: 1.8rem;
+        transition: all 0.3s;
+        }
+        .link-nav:hover,
+        .link-nav:active {
+        color: $dark-red ;
+        }
+    }    
+}

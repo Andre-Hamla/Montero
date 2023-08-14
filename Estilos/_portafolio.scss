@@ -1,0 +1,43 @@
+.portafolio {
+    background-image: linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)), 
+    url(/Imagenes/Seccion-Inicio/Motor.jpg);
+    background-color: $Dark-Blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    padding: 3rem 0 3rem 0;
+    .porta-prf {
+        font-size: 3.4rem;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .sec-portafolio{
+        @include box-grid(0, 0);
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding-bottom: 2.2rem;
+        
+        .porta-prrf{
+            color: $light-gray;
+            font-size: 3rem;
+        }
+        .slider {
+            position: relative;
+            
+            
+            .info-port {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.2);
+                color: $Dark-Blue;
+                width: 49.99rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+        }    
+    }
+}

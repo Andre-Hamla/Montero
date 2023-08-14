@@ -1,0 +1,126 @@
+.caja {
+    @include box-grid(0, 0);
+    grid-template-columns: 1fr 4fr;
+    background-color: $Dark-Blue;
+    
+    aside {
+        padding: 2rem;
+        color: $Light-Bluewhite;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .ttl{
+            font-weight: 400;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 1rem;
+        }
+        .categoria{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .btn-categoria{
+                background-color: transparent;
+                border: 0;
+                color: $dark-grey;
+                font-size: 1.7rem;
+                text-align: left;
+                cursor: pointer;
+                transition: .2s;    
+                &:hover{
+                color: $dark-red;
+                transform: translateY(-2px);
+                }
+            }
+        }
+        .newsletter {
+            color: $dark-grey;
+            .ttl-news{
+                font-size: 1.6rem;
+                font-weight: 100;
+                color: $white;
+                margin: .8rem;
+                text-align: left;
+            }
+            .form input{
+                padding: .5rem;
+                border-radius: 1rem;
+                border: .2rem solid $dark-grey;
+                width: 90%;
+                margin-bottom: 1rem;    
+            }
+            .data-news{
+                display: flex;
+                gap: 1rem;
+                font-size: 1.2rem;
+                text-align: left;
+                margin-bottom: 1rem ;
+
+                b{
+                    color: $Light-Bluewhite;
+                }
+            }
+            .btn-news {
+                .btn-subs{
+                    border: 0;
+                    background-color: $dark-grey;
+                    border-radius: 1.2rem;
+                    text-transform: uppercase;
+                    padding: .6rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: 2px solid $light-gray;
+                }
+            }
+        }
+    }
+    main {
+        background-color: $light-gray;
+        margin: 1rem;
+        margin-left: 0;
+        border-radius: 2rem;
+        padding: 3rem;
+        .contenedor-productos{
+            @include box-grid(1rem, 0);
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: 1fr 1fr; */
+            .img-pdt{
+                max-width: 100%;
+                border-radius: 1rem;
+            }
+            .info-pdt{
+                background-color: $Dark-Blue;
+                color: $dark-grey;
+                padding: .5rem;
+                border-radius: 1rem;
+                text-align: center;
+                margin-top: -2rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: .75rem;
+                .agg-pdt{
+                    border: 0;
+                    background-color: $dark-grey;
+                    border-radius: 1rem;
+                    text-transform: uppercase;
+                    padding: .4rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: 2px solid $light-gray;
+                    &:hover{
+                        background-color: $light-blue;
+                        color: $dark-grey;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}    

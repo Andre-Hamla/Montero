@@ -1,4 +1,57 @@
-/*----------------------GENERAL-------------------------*/
+/*Color texto con Fondo blanco*/
+/*Color texto con fondo oscuro*/
+/*Dark grayish red*/
+/*Dark Red*/
+/*Background Color*/
+/*light Blue*/
+.shake-bottom {
+  animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+@keyframes shake-bottom {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%, 40%, 60% {
+    transform: rotate(-4deg);
+  }
+  30%, 50%, 70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+.wobble-hor-bottom {
+  animation: wobble-hor-bottom 0.8s both;
+}
+@keyframes wobble-hor-bottom {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -19,7 +72,8 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: #555; /*CAMBIAR*/
+  scroll-behavior: smooth;
 }
 
 .contenedor {
@@ -28,7 +82,6 @@ body {
   margin: 0 auto;
 }
 
-/*----------------------HEADER-------------------------*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -58,9 +111,8 @@ body {
   color: #9d0002;
 }
 
-/*----------------------Seccion INICIO-------------------------*/
 .sec-incio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Imagenes/Seccion-Inicio/Mitsu-Motor-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Imagenes/Seccion-Inicio/Mitsu-Motor-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -69,12 +121,12 @@ body {
 }
 .sec-incio .montero {
   max-width: 130rem;
-  margin: 0 auto;
   padding: 0 3.2rem;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
   align-items: center;
+  grid-template-columns: 1fr 1fr;
 }
 .sec-incio .montero .box-inicio {
   text-align: center;
@@ -95,25 +147,24 @@ body {
   margin-bottom: 4.8rem;
   color: #F3F5F8;
 }
-.sec-incio .montero .box-inicio .dtion-inicio .btn:link, .sec-incio .montero .box-inicio .dtion-inicio .btn:active {
+.sec-incio .montero .box-inicio .btn-inicio, .sec-incio .montero .box-inicio .btn-inicio:link, .sec-incio .montero .box-inicio .btn-inicio:active {
   background-color: #9d0002;
-  color: #C9C6C6;
+  color: #c9c6c6;
   font-size: 2rem;
   font-weight: 500;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   text-decoration: none;
 }
-.sec-incio .montero .box-inicio .dtion-inicio .btn:hover {
+.sec-incio .montero .box-inicio .btn-inicio:hover {
   background-color: #c06a6a;
 }
-.sec-incio .montero .box-inicio .dtion-inicio .btn:visited {
-  color: #C9C6C6;
+.sec-incio .montero .box-inicio .btn-inicio:visited {
+  color: #c9c6c6;
 }
 
-/*----------------------Seccion NOSOTROS-------------------------*/
 .sec-nosotros {
-  background-color: #c8c8c8;
+  background-color: #C8C8C8;
   padding: 3rem 0 3rem 0;
   position: relative;
 }
@@ -133,9 +184,8 @@ body {
 }
 .sec-nosotros .nos-servicios {
   display: grid;
-  -moz-column-gap: 6.4rem;
-       column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  gap: 9.6rem;
+  align-items: 0;
   grid-template-columns: repeat(3, 1fr);
 }
 .sec-nosotros .nos-servicios .serv-icon {
@@ -157,7 +207,6 @@ body {
   color: #2b2d42;
 }
 
-/*----------------------Seccion Portafolio-------------------------*/
 .portafolio {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Imagenes/Seccion-Inicio/Motor.jpg);
   background-color: #2b2d42;
@@ -174,12 +223,14 @@ body {
 }
 .portafolio .sec-portafolio {
   display: grid;
+  gap: 0;
+  align-items: 0;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
   padding-bottom: 2.2rem;
 }
 .portafolio .sec-portafolio .porta-prrf {
-  color: #c8c8c8;
+  color: #C8C8C8;
   font-size: 3rem;
 }
 .portafolio .sec-portafolio .slider {
@@ -196,7 +247,6 @@ body {
   text-align: center;
 }
 
-/*----------------------Seccion BLOG-------------------------*/
 .blog {
   display: flex;
   align-items: center;
@@ -205,13 +255,21 @@ body {
 }
 .blog .articulos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: 0;
+  grid-template-columns: repeat(3, 1fr);
 }
 .blog .articulos .posts {
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: 0.2s;
+}
+.blog .articulos .posts:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.15);
+}
+.blog .articulos .posts:hover .img-post {
+  transform: scale(1.1);
 }
 .blog .articulos .posts .post-header {
   width: 100%;
@@ -219,30 +277,30 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
-.blog .articulos .posts .post-body {
+.blog .articulos .post-body {
   padding: 1.5rem;
 }
-.blog .articulos .posts .post-body span {
+.blog .articulos .post-body span {
   display: inline-block;
   color: #4c4e67;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   text-align: center;
 }
-.blog .articulos .posts .post-body .art-ttl {
+.blog .articulos .post-body .art-ttl {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   color: #9d0002;
   text-align: center;
 }
-.blog .articulos .posts .post-body .art-txt {
+.blog .articulos .post-body .art-txt {
   line-height: 1.5;
   margin-bottom: 2rem;
   color: #2b2d42;
   font-size: 1.5rem;
   text-align: left;
 }
-.blog .articulos .posts .post-body .art-link {
+.blog .articulos .post-body .art-link {
   display: block;
   text-decoration: none;
   padding: 1rem;
@@ -256,40 +314,21 @@ body {
   box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
-.blog .articulos .posts .post-body .art-link:hover {
+.blog .articulos .post-body .art-link:hover {
   background: #770406;
   box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
-.blog .articulos .posts .posts:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.15);
-}
-.blog .articulos .posts .posts:hover .img-post {
-  transform: scale(1.1);
-}
-.blog .articulos .posts .img-post {
+.blog .articulos .img-post {
   width: 100%;
   height: 20rem;
   transition: 0.2s;
 }
 
-/*----------------------Seccion CONTACTO  -------------------------*/
-.conta-address .icon-contac {
-  margin-bottom: 1.2rem;
-}
-.conta-address .txt-contac {
-  text-align: justify;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  color: #2b2d42;
-  font-weight: 500;
-  font-family: "Rubik", sans-serif;
-}
-
-/*----------------------Seccion TIENDA  -------------------------*/
 .caja {
   display: grid;
+  gap: 0;
+  align-items: 0;
   grid-template-columns: 1fr 4fr;
   background-color: #2b2d42;
 }
@@ -319,7 +358,7 @@ body {
 .caja aside .categoria .btn-categoria {
   background-color: transparent;
   border: 0;
-  color: #C9C6C6;
+  color: #c9c6c6;
   font-size: 1.7rem;
   text-align: left;
   cursor: pointer;
@@ -330,7 +369,7 @@ body {
   transform: translateY(-2px);
 }
 .caja aside .newsletter {
-  color: #C9C6C6;
+  color: #c9c6c6;
 }
 .caja aside .newsletter .ttl-news {
   font-size: 1.6rem;
@@ -342,7 +381,7 @@ body {
 .caja aside .newsletter .form input {
   padding: 0.5rem;
   border-radius: 1rem;
-  border: 0.2rem solid #C9C6C6;
+  border: 0.2rem solid #c9c6c6;
   width: 90%;
   margin-bottom: 1rem;
 }
@@ -358,16 +397,16 @@ body {
 }
 .caja aside .newsletter .btn-news .btn-subs {
   border: 0;
-  background-color: #C9C6C6;
+  background-color: #c9c6c6;
   border-radius: 1.2rem;
   text-transform: uppercase;
   padding: 0.6rem;
   font-weight: bold;
   cursor: pointer;
-  border: 2px solid #c8c8c8;
+  border: 2px solid #C8C8C8;
 }
 .caja main {
-  background-color: #c8c8c8;
+  background-color: #C8C8C8;
   margin: 1rem;
   margin-left: 0;
   border-radius: 2rem;
@@ -375,9 +414,10 @@ body {
 }
 .caja main .contenedor-productos {
   display: grid;
+  gap: 1rem;
+  align-items: 0;
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: 1fr 1fr; */
-  gap: 1rem;
 }
 .caja main .contenedor-productos .img-pdt {
   max-width: 100%;
@@ -385,7 +425,7 @@ body {
 }
 .caja main .contenedor-productos .info-pdt {
   background-color: #2b2d42;
-  color: #C9C6C6;
+  color: #c9c6c6;
   padding: 0.5rem;
   border-radius: 1rem;
   text-align: center;
@@ -397,21 +437,32 @@ body {
 }
 .caja main .contenedor-productos .info-pdt .agg-pdt {
   border: 0;
-  background-color: #C9C6C6;
+  background-color: #c9c6c6;
   border-radius: 1rem;
   text-transform: uppercase;
   padding: 0.4rem;
   font-weight: bold;
   cursor: pointer;
-  border: 2px solid #c8c8c8;
+  border: 2px solid #C8C8C8;
 }
 .caja main .contenedor-productos .info-pdt .agg-pdt:hover {
   background-color: #4c4e67;
-  color: #C9C6C6;
+  color: #c9c6c6;
   border: 0;
 }
 
-/*----------------------Seccion FOOTER  -------------------------*/
+.conta-address .icon-contac {
+  margin-bottom: 1.2rem;
+}
+.conta-address .txt-contac {
+  text-align: justify;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #2b2d42;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+}
+
 .footer {
   padding-top: 4%;
 }

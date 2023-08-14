@@ -1,0 +1,45 @@
+.sec-nosotros{
+    background-color: $light-gray;
+    padding: 3rem 0 3rem 0;
+    position: relative;
+
+    .nos-his-ttl{   
+        color: $dark-red;
+        font-size: 4.0rem;
+        text-align: center;
+        padding: 1.6rem 3.2rem;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+    }
+    .nos-his-txt{
+        color: $Dark-Blue ;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3.2rem ;
+    }
+    
+    .nos-servicios{
+        @include box-grid(9.6rem, 0);
+        grid-template-columns: repeat(3, 1fr);
+
+        .serv-icon {
+            display: block;
+            margin: auto;
+            margin-bottom: 1.2rem;
+        }
+        .serv-ttl {
+            text-align: center;
+            margin-bottom: 1.2rem;
+            color: $dark-red;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        
+        .serv-prf {
+            text-align: justify;
+            font-size: 1.4rem ;
+            line-height: 1.2;
+            color:$Dark-Blue
+        }
+    }
+}

@@ -1,0 +1,20 @@
+$Dark-Blue: #2b2d42;             /*Color texto con Fondo blanco*/
+$Light-Bluewhite: #F3F5F8;       /*Color texto con fondo oscuro*/ 
+$dark-grey:#c9c6c6;              /*Dark grayish red*/ 
+$dark-red:#9d0002;               /*Dark Red*/ 
+$light-gray:#C8C8C8;             /*Background Color*/  
+$light-blue: #4c4e67;            /*light Blue*/ 
+$white: #e1dfdf;   
+
+
+@mixin box-ppties {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+@mixin box-grid($gapsize, $aligns) {
+    display: grid;
+    gap: $gapsize;
+    align-items: $aligns;
+}
