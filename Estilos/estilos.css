@@ -111,27 +111,25 @@ body {
   color: #9d0002;
 }
 
-.sec-incio {
+.inilogo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Imagenes/Seccion-Inicio/Mitsu-Motor-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
   background-color: #2b2d42; /* Fallback Color*/
+}
+.inilogo .sec-incio {
   padding: 4.8rem 0 9.6rem 0;
 }
-.sec-incio .montero {
+.inilogo .sec-incio .montero {
   max-width: 130rem;
   padding: 0 3.2rem;
   margin: 0 auto;
-  display: grid;
-  gap: 9.6rem;
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
 }
-.sec-incio .montero .box-inicio {
+.inilogo .sec-incio .montero .box-inicio {
   text-align: center;
 }
-.sec-incio .montero .box-inicio .ttl-1 {
+.inilogo .sec-incio .montero .box-inicio .ttl-1 {
   text-align: center;
   font-size: 4.8rem;
   font-weight: 700;
@@ -139,7 +137,7 @@ body {
   margin-bottom: 3.2rem;
   color: #F3F5F8;
 }
-.sec-incio .montero .box-inicio .dtion-inicio {
+.inilogo .sec-incio .montero .box-inicio .dtion-inicio {
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   text-align: justify;
@@ -147,7 +145,7 @@ body {
   margin-bottom: 4.8rem;
   color: #F3F5F8;
 }
-.sec-incio .montero .box-inicio .btn-inicio, .sec-incio .montero .box-inicio .btn-inicio:link, .sec-incio .montero .box-inicio .btn-inicio:active {
+.inilogo .sec-incio .montero .box-inicio .btn-inicio, .inilogo .sec-incio .montero .box-inicio .btn-inicio:link, .inilogo .sec-incio .montero .box-inicio .btn-inicio:active {
   background-color: #9d0002;
   color: #c9c6c6;
   font-size: 2rem;
@@ -156,11 +154,32 @@ body {
   border-radius: 9px;
   text-decoration: none;
 }
-.sec-incio .montero .box-inicio .btn-inicio:hover {
+.inilogo .sec-incio .montero .box-inicio .btn-inicio:hover {
   background-color: #c06a6a;
 }
-.sec-incio .montero .box-inicio .btn-inicio:visited {
+.inilogo .sec-incio .montero .box-inicio .btn-inicio:visited {
   color: #c9c6c6;
+}
+.inilogo .marcas .logo-gale .gale-prrf {
+  padding: 4.8rem;
+  color: #F3F5F8;
+  font-size: 3rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.inilogo .marcas .logo-gale .galeria {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 4.8rem;
+}
+.inilogo .marcas .logo-gale .galeria .car-logo .renault {
+  width: 70%;
 }
 
 .sec-nosotros {
@@ -216,10 +235,11 @@ body {
   padding: 3rem 0 3rem 0;
 }
 .portafolio .porta-prf {
-  font-size: 3.4rem;
-  color: #e1dfdf;
+  font-size: 4rem;
+  color: #ffffff;
   text-align: center;
-  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 3rem;
 }
 .portafolio .sec-portafolio {
   display: grid;
@@ -232,6 +252,8 @@ body {
 .portafolio .sec-portafolio .porta-prrf {
   color: #C8C8C8;
   font-size: 3rem;
+  font-size: 2.4rem;
+  text-align: center;
 }
 .portafolio .sec-portafolio .slider {
   position: relative;
@@ -246,8 +268,18 @@ body {
   font-size: 2rem;
   text-align: center;
 }
+.portafolio .sec-portafolio .img-slider .crs-txt h5 {
+  color: #9d0002;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.portafolio .sec-portafolio .img-slider .crs-txt p {
+  color: #4c4e67;
+  font-size: 1.2rem;
+}
 
 .blog {
+  background-color: #C8C8C8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,6 +292,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 .blog .articulos .posts {
+  background-color: #e1dfdf;
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: 0.2s;
@@ -451,26 +484,158 @@ body {
   border: 0;
 }
 
-.conta-address .icon-contac {
-  margin-bottom: 1.2rem;
+.contacto {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Imagenes/Imagenes/Bk-Color.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-color: #2b2d42; /* Fallback Color*/
 }
-.conta-address .txt-contac {
-  text-align: justify;
-  font-size: 1.4rem;
+.contacto .txt-contac1 {
+  text-align: center;
+  font-size: 2.5rem;
   line-height: 1.2;
-  color: #2b2d42;
+  color: #e1dfdf;
   font-weight: 500;
   font-family: "Rubik", sans-serif;
+  padding: 2rem;
+}
+.contacto .contact-ppt {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  gap: 9.6rem;
+  align-items: center;
+}
+.contacto .contact-ppt .datos-ppt {
+  padding: 2rem 0;
+  border-bottom: 1px solid red;
+}
+.contacto .contact-ppt .boot-icon {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.2rem;
+}
+.contacto .contact-ppt .sec-contacto {
+  padding-bottom: 6.2rem;
+}
+.contacto .contact-ppt .sec-contacto .txt-contac {
+  padding-top: 1rem;
+  color: #e1dfdf;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 200;
+}
+.contacto .sec-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  background-color: #0f0f0f;
+  box-shadow: 3px 3px 14px 0px rgb(61, 57, 61);
+  padding: 3rem;
+}
+.contacto .sec-form .btn-form {
+  width: 50%;
+  background-color: #9d0002;
+  color: #c9c6c6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1.1rem 1.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+  margin: auto;
 }
 
 .footer {
-  padding-top: 4%;
+  background-color: #030708;
+  padding-top: 4rem;
+  border-top: 1px solid red;
 }
-.footer .foo-info {
+.footer .footer-box {
+  display: grid;
+  grid: "uno dos tres" 1fr "cuatro cuatro cinco" 1fr/1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+.footer .footer-box .uno {
+  grid-area: uno;
+}
+.footer .footer-box .dos {
+  grid-area: dos;
+  align-self: center;
+  justify-self: center;
+}
+.footer .footer-box .tres {
+  grid-area: tres;
+}
+.footer .footer-box .cuatro {
+  grid-area: cuatro;
+  align-self: end;
+  padding-bottom: 1rem;
+  justify-self: end;
+}
+.footer .footer-box .cinco {
+  grid-area: cinco;
+}
+.footer .footer-box .map-item {
+  margin-bottom: 1rem;
+  color: #c9c6c6;
+  font-size: 2rem;
+}
+.footer .footer-box .map-item .link-map {
+  text-decoration: none;
+  color: #c9c6c6;
+}
+.footer .footer-box .map-item .link-map:hover {
+  background-color: #C8C8C8;
+  color: #2b2d42;
+}
+.footer .footer-box .redes p {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  color: #9d0002;
+}
+.footer .footer-box .redes-box {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer-box .redes-box .icon-redes {
+  transition: 0.2s;
+}
+.footer .footer-box .redes-box .icon-redes:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.15);
+}
+.footer .footer-box .pagos p {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  color: #9d0002;
+}
+.footer .footer-box .pagos-box {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer-box .pagos-box .icon-pagos {
+  transition: 0.2s;
+}
+.footer .footer-box .pagos-box .icon-pagos:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.15);
+}
+.footer .footer-box .foo-info {
   font-family: "Rubik", sans-serif;
   list-style: none;
-  color: #2b2d42;
+  color: #c9c6c6;
   font-size: 1.4rem;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
 }/*# sourceMappingURL=estilos.css.map */

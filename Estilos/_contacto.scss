@@ -1,13 +1,81 @@
-.conta-address {
-    .icon-contac{
-    margin-bottom: 1.2rem;
+.contacto {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)), 
+        url(../Imagenes/Imagenes/Bk-Color.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-color: $Dark-Blue; /* Fallback Color*/
+
+
+    .txt-contac1{
+        text-align: center;
+        font-size: 2.5rem ;
+        line-height: 1.2;
+        color:$white;
+        font-weight: 500;
+        font-family: "Rubik", sans-serif;
+        padding: 2rem;
+        }
+
+    .contact-ppt  {
+        @include box-ppties;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        gap: 9.6rem;
+        align-items: center;
+        
+
+
+        .datos-ppt {
+            padding: 2rem 0;
+            border-bottom: 1px solid red;
+        }
+
+        .boot-icon {
+            display: block;
+            margin: auto;
+            margin-bottom: 0.2rem;
+            }
+        
+
+        
+        .sec-contacto {
+            padding-bottom: 6.2rem;
+            
+            .txt-contac{
+                padding-top: 1rem;
+                color: $white;
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 200
+            }
+        }
     }
-    .txt-contac{
-    text-align: justify;
-    font-size: 1.4rem ;
-    line-height: 1.2;
-    color:$Dark-Blue;
-    font-weight: 500;
-    font-family: "Rubik", sans-serif;
+    .sec-form {
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+        background-color: #0f0f0f;
+        -webkit-box-shadow: 3px 3px 14px 0px rgba(61,57,61,1);
+        -moz-box-shadow: 3px 3px 14px 0px rgba(61,57,61,1);
+        box-shadow: 3px 3px 14px 0px rgba(61,57,61,1);
+        padding: 3rem;
+
+        .btn-form {
+            width: 50%;
+            background-color: $dark-red;
+            color: $dark-grey;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1.1rem 1.2rem;
+            border-radius: 9px;
+            text-decoration: none;
+            margin: auto;
+
+        }
     }
 }

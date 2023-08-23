@@ -9,10 +9,11 @@
     background-position: left;
     padding: 3rem 0 3rem 0;
     .porta-prf {
-        font-size: 3.4rem;
-        color: $white;
+        font-size: 4rem;
+        color: #ffffff;
         text-align: center;
-        text-transform: uppercase;
+        font-weight: 500;
+        padding-bottom: 3rem
     }
     .sec-portafolio{
         @include box-grid(0, 0);
@@ -23,6 +24,8 @@
         .porta-prrf{
             color: $light-gray;
             font-size: 3rem;
+            font-size: 2.4rem;
+            text-align: center;
         }
         .slider {
             position: relative;
@@ -37,6 +40,17 @@
                 width: 49.99rem;
                 font-size: 2rem;
                 text-align: center;
+            }
+        }
+        .img-slider {
+            .crs-txt h5{
+                color: $dark-red;
+                text-transform: uppercase;
+                font-size: 2rem;
+            }
+            .crs-txt p {
+                color: $light-blue;
+                font-size: 1.2rem;
             }
         }    
     }
