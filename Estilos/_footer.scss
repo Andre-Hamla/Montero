@@ -1,11 +1,101 @@
 .footer {
-    padding-top: 4%;
-    .foo-info {
-        font-family: "Rubik", sans-serif;
-        list-style: none;
-        color: $Dark-Blue;
-        font-size: 1.4rem;
-        text-decoration: none;
-        font-weight: 400;
+    background-color: #030708;
+    padding-top: 4rem;
+    border-top: 1px solid red;
+
+
+    .footer-box     {
+        display: grid;
+        grid: 
+        "uno dos tres" 1fr
+        "cuatro cuatro cinco" 1fr
+        / 1fr 1fr 1fr;
+        ;
+        gap: 0.8rem;
+    
+        .uno {
+            grid-area: uno;
+        }
+        .dos {
+            grid-area: dos;
+            align-self: center;
+            justify-self: center
+        }
+        .tres {
+            grid-area: tres;
+        }
+        .cuatro {
+            grid-area: cuatro;
+            align-self: end;
+            padding-bottom: 1rem;
+            justify-self: end;
+        }
+        .cinco {
+            grid-area: cinco;
+        }
+    .map-item {
+        margin-bottom: 1rem;
+        color:$dark-grey;
+        font-size: 2rem;
+    
+
+        .link-map {
+            text-decoration: none;
+            color: $dark-grey;
+            &:hover{
+                background-color:$light-gray;
+                color: $Dark-Blue;
+            }
+        }
+    }   
+        .redes p {
+            text-align: center;
+            font-size: 2rem;
+            padding-bottom: 2rem;
+            color: $dark-red;
+        }
+        .redes-box {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+
+            .icon-redes {
+                transition: .2s;
+                &:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .15);
+                }
+            }
+        }
+        .pagos p {
+            text-align: center;
+            font-size: 2rem;
+            padding-bottom: 2rem;
+            color: $dark-red;
+        }
+        .pagos-box {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+            .icon-pagos {
+                transition: .2s;
+                &:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .15);
+                }
+            }
+        }
+
+        .foo-info {
+            font-family: "Rubik", sans-serif;
+            list-style: none;
+            color: $dark-grey;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: 300;
+        }
     }
 }
+
