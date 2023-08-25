@@ -130,7 +130,7 @@ header {
 .navbar_ .menu-Btn {
   cursor: pointer;
   display: none;
-  color: #fff;
+  color: #c9c6c6;
   font-size: 2rem;
 }
 @media screen and (max-width: 950px) {
@@ -147,9 +147,9 @@ header {
   top: 60px;
   width: 300px;
   height: 0;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  background: rgba(148, 20, 20, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -167,7 +167,13 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 240px;
+  height: 400px;
+}
+
+.dropdown_menu .link-nav {
+  color: #e1dfdf;
+  font-size: 2.2rem;
+  padding: 1rem;
 }
 
 .dropdown_menu li {
@@ -253,6 +259,29 @@ header {
     padding-right: 2rem;
   }
 }
+@media screen and (max-width: 700px) {
+  .inilogo .marcas .logo-gale .galeria {
+    display: grid;
+    grid: "uno uno" 1fr "dos tres" 1fr/1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+  .inilogo .marcas .logo-gale .galeria .g-uno {
+    grid-area: uno;
+  }
+  .inilogo .marcas .logo-gale .galeria .g-dos {
+    grid-area: dos;
+  }
+  .inilogo .marcas .logo-gale .galeria .g-tres {
+    grid-area: tres;
+  }
+}
+@media screen and (max-width: 700px) {
+  .inilogo .marcas .logo-gale .galeria .car-logo {
+    margin: auto;
+  }
+}
 .inilogo .marcas .logo-gale .galeria .car-logo .renault {
   width: 200px;
 }
@@ -281,6 +310,19 @@ header {
   gap: 9.6rem;
   align-items: 0;
   grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 700px) {
+  .sec-nosotros .nos-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 700px) and (max-width: 700px) {
+  .sec-nosotros .nos-servicios .post_uno {
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+  }
 }
 .sec-nosotros .nos-servicios .serv-icon {
   display: block;
@@ -371,6 +413,12 @@ header {
   justify-content: center;
   padding: 3rem 1.5rem;
 }
+@media screen and (max-width: 950px) {
+  .blog {
+    justify-content: none;
+    align-items: none;
+  }
+}
 .blog .articulos {
   display: grid;
   gap: 2rem;
@@ -379,8 +427,8 @@ header {
 }
 @media screen and (max-width: 950px) {
   .blog .articulos {
-    display: grid;
-    grid-template-columns: repeat(1, 2fr);
+    display: flex;
+    flex-direction: column;
   }
 }
 .blog .articulos .posts {
@@ -393,6 +441,7 @@ header {
   .blog .articulos .posts {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    overflow: unset;
   }
 }
 .blog .articulos .posts:hover {
@@ -401,6 +450,11 @@ header {
 }
 .blog .articulos .posts:hover .img-post {
   transform: scale(1.1);
+}
+@media screen and (max-width: 950px) {
+  .blog .articulos .posts:hover .img-post {
+    transform: none;
+  }
 }
 .blog .articulos .posts .post-header {
   width: 100%;
@@ -455,6 +509,14 @@ header {
   height: 20rem;
   transition: 0.2s;
 }
+@media screen and (max-width: 950px) {
+  .blog .articulos .img-post {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+}
 
 .caja {
   display: grid;
@@ -480,6 +542,11 @@ header {
   text-align: center;
   font-size: 3rem;
   margin-top: 1rem;
+}
+@media screen and (max-width: 576px) {
+  .caja aside .ttl {
+    position: unset;
+  }
 }
 .caja aside .categoria {
   display: flex;
@@ -550,6 +617,16 @@ header {
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: 1fr 1fr; */
 }
+@media screen and (max-width: 950px) {
+  .caja main .contenedor-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 950px) and (max-width: 576px) {
+  .caja main .contenedor-productos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .caja main .contenedor-productos .img-pdt {
   max-width: 100%;
   border-radius: 1rem;
@@ -565,6 +642,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+@media screen and (max-width: 950px) {
+  .caja main .contenedor-productos .info-pdt {
+    gap: 1rem;
+    position: unset;
+    margin-top: 0;
+  }
 }
 .caja main .contenedor-productos .info-pdt .agg-pdt {
   border: 0;
@@ -598,6 +682,11 @@ header {
   font-family: "Rubik", sans-serif;
   padding: 2rem;
 }
+@media screen and (max-width: 950px) {
+  .contacto .txt-contac1 {
+    padding-top: 4rem;
+  }
+}
 .contacto .contact-ppt {
   max-width: 130rem;
   padding: 0 3.2rem;
@@ -608,6 +697,12 @@ header {
   align-content: center;
   gap: 9.6rem;
   align-items: center;
+}
+@media screen and (max-width: 950px) {
+  .contacto .contact-ppt {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 .contacto .contact-ppt .datos-ppt {
   padding: 2rem 0;
@@ -636,6 +731,16 @@ header {
   box-shadow: 3px 3px 14px 0px rgb(61, 57, 61);
   padding: 3rem;
 }
+@media screen and (max-width: 950px) {
+  .contacto .sec-form {
+    margin-bottom: 10rem;
+  }
+}
+.contacto .sec-form .p_form {
+  color: #F3F5F8;
+  font-size: 2rem;
+  text-align: center;
+}
 .contacto .sec-form .btn-form {
   width: 50%;
   background-color: #9d0002;
@@ -658,13 +763,31 @@ header {
   grid: "uno dos tres" 1fr "cuatro cuatro cinco" 1fr/1fr 1fr 1fr;
   gap: 0.8rem;
 }
+@media screen and (max-width: 576px) {
+  .footer .footer-box {
+    grid: "uno" 1fr "dos" 1fr "tres" 1fr "cinco" 1fr "cuatro" 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .footer .footer-box .uno {
   grid-area: uno;
+}
+@media screen and (max-width: 576px) {
+  .footer .footer-box .uno {
+    width: 300px;
+  }
 }
 .footer .footer-box .dos {
   grid-area: dos;
   align-self: center;
   justify-self: center;
+}
+@media screen and (max-width: 576px) {
+  .footer .footer-box .dos {
+    align-self: center;
+    justify-self: center;
+  }
 }
 .footer .footer-box .tres {
   grid-area: tres;
@@ -674,6 +797,12 @@ header {
   align-self: end;
   padding-bottom: 1rem;
   justify-self: end;
+}
+@media screen and (max-width: 576px) {
+  .footer .footer-box .cuatro {
+    justify-self: start;
+    align-self: center;
+  }
 }
 .footer .footer-box .cinco {
   grid-area: cinco;

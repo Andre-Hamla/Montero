@@ -12,14 +12,34 @@
         / 1fr 1fr 1fr;
         ;
         gap: 0.8rem;
+        @include mobile {
+             
+            grid: 
+            "uno" 1fr
+            "dos" 1fr
+            "tres" 1fr
+            "cinco" 1fr 
+            "cuatro" 1fr
+            ;
+            align-items: center;
+            justify-content: center;
+        }
     
         .uno {
             grid-area: uno;
+            @include mobile {
+            width: 300px;
+            }
         }
         .dos {
             grid-area: dos;
             align-self: center;
-            justify-self: center
+            justify-self: center;
+            @include mobile {
+                align-self: center;
+                justify-self:center ;
+            }
+            
         }
         .tres {
             grid-area: tres;
@@ -29,6 +49,10 @@
             align-self: end;
             padding-bottom: 1rem;
             justify-self: end;
+            @include mobile{
+                justify-self: start;
+                align-self: center;
+            }
         }
         .cinco {
             grid-area: cinco;

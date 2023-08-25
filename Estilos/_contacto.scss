@@ -1,7 +1,7 @@
 .contacto {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)), 
+        rgba(0,0,0,0.7)),
         url(../Imagenes/Imagenes/Bk-Color.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +17,9 @@
         font-weight: 500;
         font-family: "Rubik", sans-serif;
         padding: 2rem;
+        @include tabletpro {
+            padding-top: 4rem;
+        }
         }
 
     .contact-ppt  {
@@ -27,7 +30,12 @@
         align-content: center;
         gap: 9.6rem;
         align-items: center;
-        
+        @include tabletpro {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+        }
+
 
 
         .datos-ppt {
@@ -40,12 +48,12 @@
             margin: auto;
             margin-bottom: 0.2rem;
             }
-        
 
-        
+
+
         .sec-contacto {
             padding-bottom: 6.2rem;
-            
+
             .txt-contac{
                 padding-top: 1rem;
                 color: $white;
@@ -64,6 +72,16 @@
         -moz-box-shadow: 3px 3px 14px 0px rgba(61,57,61,1);
         box-shadow: 3px 3px 14px 0px rgba(61,57,61,1);
         padding: 3rem;
+        @include tabletpro {
+            margin-bottom: 10rem;
+            
+        }
+        .p_form {
+            color: $Light-Bluewhite;
+            font-size: 2rem;
+            text-align: center;
+            
+        }
 
         .btn-form {
             width: 50%;

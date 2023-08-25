@@ -84,10 +84,32 @@
             @include tabletpro {
                 padding-right: 2rem;
             }
+            @include tabletsmall {
+                display: grid;
+                grid: 
+                "uno uno" 1fr
+                "dos tres" 1fr /
+                1fr 1fr;
+                gap: 1rem;
+                justify-content: center;
+                align-content: center;
+                .g-uno {
+                    grid-area: uno;
+                }
+                .g-dos {
+                    grid-area: dos;
+                }
+                .g-tres {
+                    grid-area: tres;
+                }
+            }
             .car-logo {
-                
+                @include tabletsmall {
+                    margin: auto;
+                }
                 .renault {
                     width: 200px;
+                
                 }
             }   
         }

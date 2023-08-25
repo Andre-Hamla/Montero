@@ -4,13 +4,18 @@
     align-items: center;
     justify-content: center;
     padding: 3rem 1.5rem;
+    @include tabletpro {
+        justify-content: none;
+        align-items: none;
+    }
 
     .articulos {
         @include box-grid(2rem, 0);
         grid-template-columns: repeat(3, 1fr);
         @include tabletpro {
-            display: grid;
-            grid-template-columns: repeat(1, 2fr);
+            display: flex;
+            flex-direction: column;
+            // grid-template-columns: repeat(1, 1fr);
         }
 
 
@@ -22,6 +27,7 @@
             @include tabletpro {
                 display: grid;
                 grid-template-columns: 1fr 2fr;
+                overflow: unset;
             }
             &:hover {
                 transform: translateY(-4px);
@@ -29,6 +35,9 @@
             }
             &:hover .img-post {
                 transform: scale(1.1);
+                @include tabletpro {
+                    transform: none;
+                }
             }
             
             .post-header {
@@ -84,6 +93,10 @@
                 width: 100%;
                 height: 20rem;
                 transition: .2s;
+                @include tabletpro {
+                    object-fit: cover;
+                    object-position: center center ;
+                }
             }
         }        
     }
