@@ -82,33 +82,99 @@ body {
   margin: 0 auto;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #030708;
-  height: auto;
-  padding: 0 4.8rem;
-}
-.header .logo {
-  height: 7.4rem;
-}
-.header .main-nav-list {
+li {
   list-style: none;
-  display: flex;
-  gap: 3.2rem;
 }
-.header .main-nav-list .link-nav:link,
-.header .main-nav-list .link-nav:visited {
+
+a {
   text-decoration: none;
-  color: #F3F5F8;
-  font-weight: 500;
-  font-size: 1.8rem;
-  transition: all 0.3s;
+  color: #c9c6c6;
+  font-size: 2rem;
 }
-.header .main-nav-list .link-nav:hover,
-.header .main-nav-list .link-nav:active {
+
+a:hover {
   color: #9d0002;
+}
+
+header {
+  background-color: #030708;
+  position: relative;
+  padding: 0 2rem;
+  height: 10rem;
+}
+
+.navbar_ {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_ .logo img {
+  width: 200px;
+}
+
+.navbar_ .main-nav-list {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (max-width: 950px) {
+  .navbar_ .main-nav-list {
+    display: none;
+  }
+}
+
+.navbar_ .menu-Btn {
+  cursor: pointer;
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+}
+@media screen and (max-width: 950px) {
+  .navbar_ .menu-Btn {
+    display: block;
+  }
+}
+
+/*DropDown Menu*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@media screen and (max-width: 950px) {
+  .dropdown_menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inilogo {
@@ -119,7 +185,7 @@ body {
   background-color: #2b2d42; /* Fallback Color*/
 }
 .inilogo .sec-incio {
-  padding: 4.8rem 0 9.6rem 0;
+  padding: 9.6rem 0 9.6rem 0;
 }
 .inilogo .sec-incio .montero {
   max-width: 130rem;
@@ -145,6 +211,11 @@ body {
   margin-bottom: 4.8rem;
   color: #F3F5F8;
 }
+@media screen and (max-width: 950px) {
+  .inilogo .sec-incio .montero .box-inicio .dtion-inicio {
+    padding: 0 3rem;
+  }
+}
 .inilogo .sec-incio .montero .box-inicio .btn-inicio, .inilogo .sec-incio .montero .box-inicio .btn-inicio:link, .inilogo .sec-incio .montero .box-inicio .btn-inicio:active {
   background-color: #9d0002;
   color: #c9c6c6;
@@ -169,17 +240,21 @@ body {
   text-align: center;
 }
 .inilogo .marcas .logo-gale .galeria {
-  display: grid;
-  gap: 1rem;
-  align-items: center;
   max-width: 130rem;
   padding: 0 3.2rem;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   padding-bottom: 4.8rem;
 }
+@media screen and (max-width: 950px) {
+  .inilogo .marcas .logo-gale .galeria {
+    padding-right: 2rem;
+  }
+}
 .inilogo .marcas .logo-gale .galeria .car-logo .renault {
-  width: 70%;
+  width: 200px;
 }
 
 .sec-nosotros {
@@ -249,11 +324,22 @@ body {
   place-items: center;
   padding-bottom: 2.2rem;
 }
+@media screen and (max-width: 950px) {
+  .portafolio .sec-portafolio {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .portafolio .sec-portafolio .porta-prrf {
   color: #C8C8C8;
   font-size: 3rem;
   font-size: 2.4rem;
   text-align: center;
+}
+@media screen and (max-width: 950px) {
+  .portafolio .sec-portafolio .porta-prrf {
+    padding: 2rem 2rem;
+  }
 }
 .portafolio .sec-portafolio .slider {
   position: relative;
@@ -291,11 +377,23 @@ body {
   align-items: 0;
   grid-template-columns: repeat(3, 1fr);
 }
+@media screen and (max-width: 950px) {
+  .blog .articulos {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+}
 .blog .articulos .posts {
   background-color: #e1dfdf;
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: 0.2s;
+}
+@media screen and (max-width: 950px) {
+  .blog .articulos .posts {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 .blog .articulos .posts:hover {
   transform: translateY(-4px);

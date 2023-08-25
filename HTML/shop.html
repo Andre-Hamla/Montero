@@ -18,19 +18,34 @@
 
 </head>
 <body>
-<header class="header">
-        <a href="./index.html"><img class="logo" src="../Imagenes/Imagenes/Montero Logo Color.png" alt="Montero y Algo Mas Logo"></a>
-    <nav class="main-navigation">
-        <ul class="main-nav-list">
-            <li><a href="../index.html" class="link-nav">Inicio</a></li>
-            <li><a href="#" class="link-nav">Nosotros</a></li>
-            <li><a href="#" class="link-nav">Portafolio</a></li>
-            <li><a href="#" class="link-nav"><i class="bi bi-bag"></i> Tienda</a></li>
-            <li><a href="#" class="link-nav">Blog</a></li>
-            <li><a href="#" class="link-nav">Contacto</a></li>
-        </ul>
-    </nav>    
-</header>
+    <header>
+        <div class="navbar_">
+            <div class="logo">
+                <a href="../index.html"><img  src="../Imagenes/Imagenes/Montero Logo Color red.png" alt="Montero y Algo Mas Logo"></a>
+            </div>
+            <div class="main-navigation">  
+                    <ul class="main-nav-list">
+                        <li><a href="../index.html" class="link-nav">Inicio</a></li>
+                        <li><a href="#nosotros" class="link-nav">Nosotros</a></li>
+                        <li><a href="#portafolio" class="link-nav">Portafolio</a></li>
+                        <li><a href="./shop.html" class="link-nav"><i class="bi bi-bag"></i> Tienda</a></li>
+                        <li><a href="#blog" class="link-nav">Blog</a></li>
+                        <li><a href="#contacto" class="link-nav">Contacto</a></li>
+                    </ul>
+            </div>  
+                <div class="menu-Btn">
+                    <i class="bi bi-list"></i>
+                </div>
+        </div>  
+        <div class="dropdown_menu">
+            <li><a href="#inicio" class="link-nav">Inicio</a></li>
+                <li><a href="#nosotros" class="link-nav">Nosotros</a></li>
+                <li><a href="#portafolio" class="link-nav">Portafolio</a></li>
+                <li><a href="./HTML/shop.html" class="link-nav"><i class="bi bi-bag"></i> Tienda</a></li>
+                <li><a href="#blog" class="link-nav">Blog</a></li>
+                <li><a href="#contacto" class="link-nav">Contacto</a></li>
+        </div>   
+    </header>
 <body>
     <div class="caja">
         <aside>
@@ -199,6 +214,20 @@
             </div>
         </main> 
     </div>
+    <script>
+        const menuBtn = document.querySelector('.menu-Btn')
+        const menuBtnIcon = document.querySelector('.menu-Btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+        menuBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+    
+            menuBtnIcon.classList = isOpen
+            ? 'bi bi-x-lg'
+            : 'bi bi-list'
+        }
+    </script>
 </body>
 <footer class="footer">
     <div class="footer-box">
