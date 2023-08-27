@@ -469,6 +469,17 @@ header {
     overflow: unset;
   }
 }
+@media screen and (max-width: 950px) and (max-width: 576px) {
+  .blog .articulos .posts {
+    grid: "uno" 1fr "dos" 1fr;
+  }
+  .blog .articulos .posts .post-header {
+    grid-area: uno;
+  }
+  .blog .articulos .posts .post-body {
+    grid-area: dos;
+  }
+}
 .blog .articulos .posts:hover {
   transform: translateY(-4px);
   box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.15);
@@ -483,9 +494,16 @@ header {
 }
 .blog .articulos .posts .post-header {
   width: 100%;
-  height: 20rem;
+  height: 50vh;
   overflow: hidden;
   cursor: pointer;
+}
+.blog .articulos .posts .post-header .img-post {
+  width: 100%;
+  height: 50vh;
+  transition: 0.2s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog .articulos .post-body {
   padding: 1.5rem;
@@ -528,15 +546,6 @@ header {
   background: #770406;
   box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
-}
-.blog .articulos .img-post {
-  width: 100%;
-  height: 20rem;
-  transition: 0.2s;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
 }
 
 .caja {
