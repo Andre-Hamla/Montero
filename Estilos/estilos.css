@@ -107,6 +107,7 @@ header {
   max-width: 130rem;
   padding: 0 3.2rem;
   margin: 0 auto;
+  height: 60px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -167,13 +168,14 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 400px;
+  height: 300px;
 }
 
 .dropdown_menu .link-nav {
   color: #e1dfdf;
-  font-size: 2.2rem;
-  padding: 1rem;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  text-align: left;
 }
 
 .dropdown_menu li {
@@ -289,13 +291,23 @@ header {
 .sec-nosotros {
   background-color: #C8C8C8;
   padding: 3rem 0 3rem 0;
-  position: relative;
+}
+.sec-nosotros .nosotros_header .img_encabezado {
+  display: block;
+  margin: auto;
+  width: 100%;
+  margin-top: -1rem;
+}
+@media screen and (max-width: 950px) {
+  .sec-nosotros .nosotros_header .img_encabezado {
+    width: 90%;
+  }
 }
 .sec-nosotros .nos-his-ttl {
   color: #9d0002;
   font-size: 4rem;
   text-align: center;
-  padding: 1.6rem 3.2rem;
+  padding: 4.6rem 3.2rem;
   margin-bottom: 1.2rem;
   font-weight: 500;
 }
@@ -333,11 +345,11 @@ header {
   text-align: center;
   margin-bottom: 1.2rem;
   color: #9d0002;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .sec-nosotros .nos-servicios .serv-prf {
-  text-align: justify;
+  text-align: center;
   font-size: 1.4rem;
   line-height: 1.2;
   color: #2b2d42;
@@ -404,6 +416,19 @@ header {
 .portafolio .sec-portafolio .img-slider .crs-txt p {
   color: #4c4e67;
   font-size: 1.2rem;
+}
+
+#blog {
+  background-color: #C8C8C8;
+}
+
+.ttl_blog {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  padding: 3rem 0rem 0rem 1.5rem;
+  font-size: 3rem;
+  color: #9d0002;
 }
 
 .blog {
@@ -508,14 +533,10 @@ header {
   width: 100%;
   height: 20rem;
   transition: 0.2s;
-}
-@media screen and (max-width: 950px) {
-  .blog .articulos .img-post {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center center;
-       object-position: center center;
-  }
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .caja {
