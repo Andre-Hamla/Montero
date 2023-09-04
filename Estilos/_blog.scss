@@ -3,12 +3,14 @@
 }
 .ttl_blog {
     @include box-ppties;
-    padding: 3rem 0rem 0rem 1.5rem;
+    text-align: center;
+    padding: 4rem 0rem 2rem 0rem;
     font-size: 3rem;
     color: $dark-red;
     
 }
 .blog {
+    
     background-color: $light-gray;
     display: flex;
     align-items: center;
